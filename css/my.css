@@ -1,0 +1,152 @@
+
+/*==================================
+      General
+==================================*/
+#content {
+  width: 100%;
+  margin-left:0 !important;
+  transition: .5s ease-in-out;s
+}
+
+body {
+  background: white;
+}
+/*==================================
+      Header
+==================================*/
+.power {
+  opacity: .5;
+  margin: 15px;
+  transform: scale(1.5);
+
+}
+#header {
+  width: 100%;
+
+}
+#logo {
+  width:15%;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 30px;
+}
+.menubutton {
+  position: absolute;
+  top: 45px;
+}
+/*==================================
+      #left-menu
+==================================*/
+.move {
+  -ms-transform: translateX(250px);
+  -webkit-transform: translateX(250px);
+  transform: translateX(250px); }
+
+.left-menu {
+  position: absolute;
+  width: 250px;
+  height: 100%; 
+  color: #888;
+  top: 0;
+  left: -250px;
+  padding: 15px;
+  transition: .5s ease-in-out;
+  padding: 0;
+  box-shadow: 2px 0 2px -2px #888; }
+  .left-menu h2 {
+    color: white;
+    font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #888;
+    text-align: left;
+    padding: 38.5px;
+    margin: 0; }
+    #left-menu h2 img {
+      margin-right: 15px; }
+  .left-menu ul {
+    margin: 0; }
+    .left-menu ul a {
+      color: #555; }
+      .left-menu ul a:hover {
+        color: #770088; }
+      .left-menu ul a li {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 15px 15px;
+        list-style-type: none; }
+/*==================================
+      Share buttons
+==================================*/
+.sharebuttons {
+  position: absolute;
+  top:35%;
+  left:0;
+  right:0;
+  margin-left:auto;
+  margin-right:auto;
+  z-index: 9999999999;
+  opacity: 0;
+  -ms-transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; 
+  text-align: center;
+}
+.fa {
+  color: white;
+  padding: 0 3px;
+  -ms-transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; 
+
+}
+
+.fa:hover {
+  color: #16938f;
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1); 
+
+}
+.article-title {
+  color: white;
+  font-size: 2em;
+  text-align: center;
+}
+.article-subtitle {
+  color: white;
+  font-size: 1.5em;
+  text-align: center;
+}
+/*==================================
+      Filters
+==================================*/
+.filters {
+  float: right;
+}
+/*==================================
+      Grid
+==================================*/
+.masonry-thumb img{
+  -ms-transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
+.masonry-thumb:hover img {
+  -ms-transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01); 
+  -ms-filter: brightness(0.8);
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
+}
+.masonry-thumb:hover .sharebuttons {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
