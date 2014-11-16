@@ -143,9 +143,14 @@ body {
   opacity: 1;
 }
 
+nav {
+  position: relative;
+  z-index: 9999;
+}
 
-
-
+paper-checkbox {
+  padding: 8px 20px 20px 0;
+}
 
 
 

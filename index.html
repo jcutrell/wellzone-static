@@ -15,7 +15,7 @@
 	<!-- end: Mobile Specific -->
 	
 	<!-- start: CSS -->
-	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link id="bootstrap-style" href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link id="base-style" href="css/style.css" rel="stylesheet">
 	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
@@ -34,7 +34,21 @@
 	<!--[if IE 9]>
 		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
 	<![endif]-->
-		
+
+	<!-- 1. Load webcomponents.js for polyfill support. -->
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+
+    <!-- 2. Use an HTML Import to bring in the element. -->
+    <link rel="import" href="bower_components/core-menu/core-menu.html">
+    <link rel="import" href="bower_components/paper-dropdown/paper-dropdown.html">
+    <link rel="import" href="bower_components/paper-item/paper-item.html">
+    <link rel="import" href="bower_components/paper-input/paper-input.html">
+    <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+    <link rel="import" href="bower_components/paper-checkbox/paper-checkbox.html">
+    <link rel="import" href="bower_components/paper-dropdown-menu/paper-dropdown-menu.html">
+    <link rel="import" href="bower_components/core-label/core-label.html">
+    <link rel="import" href="bower_components/paper-button/paper-button.html">
+
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="img/favicon.ico">
 	<!-- end: Favicon -->
@@ -82,43 +96,120 @@
 				
 			</div>
 
-			<!-- Single button -->
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			    Action
-			  </button>
-			  <ul class="dropdown-menu" role="menu">
-			    <li><a href="#">Action</a></li>
-			    <li><a href="#">Another action</a></li>
-			    <li><a href="#">Something else here</a></li>
-			    <li class="divider"></li>
-			    <li><a href="#">Separated link</a></li>
-			  </ul>
-			</div>
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			    Action
-			  </button>
-			  <ul class="dropdown-menu" role="menu">
-			    <li><a href="#">Action</a></li>
-			    <li><a href="#">Another action</a></li>
-			    <li><a href="#">Something else here</a></li>
-			    <li class="divider"></li>
-			    <li><a href="#">Separated link</a></li>
-			  </ul>
-			</div>
-			<div class="btn-group">
-			  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-			    Action
-			  </button>
-			  <ul class="dropdown-menu" role="menu">
-			    <li><a href="#">Action</a></li>
-			    <li><a href="#">Another action</a></li>
-			    <li><a href="#">Something else here</a></li>
-			    <li class="divider"></li>
-			    <li><a href="#">Separated link</a></li>
-			  </ul>
-			</div>
+			<!-- Filters -->
+			<!-- http://stackoverflow.com/questions/25574596/use-json-to-create-polymer-core-menu-core-submenu -->
+			<nav>
+				<div class="container">
+					<div class="row">
+						<div class="city-filter span2">
+							<paper-dropdown-menu label="Filter by City">
+							    <paper-dropdown class="dropdown">
+							        <core-menu class="menu">
+							            <paper-item>New York</paper-item>
+							            <paper-item>Los Angeles</paper-item>
+							            <paper-item>Dubai</paper-item>
+							            <paper-item>...</paper-item>
+							        </core-menu>
+							    </paper-dropdown>
+							</paper-dropdown-menu>
+						</div>
+						<div class="topic-filter span2">
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+						</div>
+						<div class="sources-filter span2">
+				            <core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+				        </div>
+						<div class="languages-filter span2">
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+							<core-label horizontal layout id="core-label-0">
+							  <paper-checkbox for="" role="checkbox" tabindex="0" aria-checked="false" aria-labelledby="core-label-0"></paper-checkbox>
+							  <div vertical layout>
+							    <h4>Health</h4>
+							  </div>
+							</core-label>
+						</div>
+						<div class="other-filters span2">
+							<div class="video-only">
+								<core-label horizontal layout id="core-label-0">
+								  <paper-toggle-button></paper-toggle-button>
+								  <div vertical layout>
+								    <h4>Video Only</h4>
+								  </div>
+								</core-label>
+							</div>
+							<div class="search">
+								<paper-input label="Search"></paper-input>
+								<paper-button raised>Search</paper-button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+
+
 			<!-- Grid -->
 
 			<div class="row-fluid sortable">

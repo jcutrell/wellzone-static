@@ -2872,11 +2872,11 @@ table th[class*="span"],
   background-position: -456px -144px;
 }
 
-.dropup,
+/*.dropup,
 .dropdown {
   position: relative;
 }
-
+*/
 .dropdown-toggle {
   *margin-bottom: -3px;
 }
